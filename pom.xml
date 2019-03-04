@@ -33,12 +33,18 @@
                         <includes>
                             <include>org.seleniumhq.selenium:*</include>
                             <include>com.google.guava:*</include>
+                            <include>com.squareup.okhttp3:*</include>
+                            <include>com.squareup.okio:*</include>
                         </includes>
                     </artifactSet>
                     <relocations>
                         <relocation>
                             <pattern>com.google</pattern>
                             <shadedPattern>ca.andricdu.google</shadedPattern>
+                        </relocation>
+                        <relocation>
+                            <pattern>com.squareup</pattern>
+                            <shadedPattern>ca.andricdu.squareup</shadedPattern>
                         </relocation>
                     </relocations>
                 </configuration>
